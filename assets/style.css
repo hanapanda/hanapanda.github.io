@@ -1,0 +1,75 @@
+
+.wrapper{
+  padding: 0px 0;
+  margin-top: -50px;
+  
+}
+/* Default slide */
+.center-slider .slick-slide{
+  height: 300px;
+  margin: 0 15px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.8);
+  transition: all 0.4s ease-in-out;
+}
+.center-slider .slick-slide,
+.center-slider .slick-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"] {
+  transform: scale(0.8, 0.8);
+  transition: all 0.4s ease-in-out;
+}
+
+/* Active center slide (You can change anything here for cenetr slide)*/
+.center-slider .slick-center,
+.center-slider .slick-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"] {
+  transform: scale(1.1);
+}
+.center-slider .slick-current.slick-active{
+  transform: scale(1.1);
+}
+
+.slick-next, .slick-prev{
+  z-index: 5;
+
+}
+
+.slick-prev:before, .slick-next:before  {
+    color: #474747;
+}
+.slick-next{
+  right: 20px;
+}
+.slick-prev{
+  left: 3px;
+}
+.slick-next:before, .slick-prev:before{
+
+  font-size: 26px;
+}
+
+
+.thumbnail img {
+    height: 130px;
+    cursor: pointer;
+
+  }
+  .video {
+    display:inline-block;
+  }
+  .video .video-title {
+    position: absolute;
+    margin-top: 160px;
+  }
+
+  /* <main id="main">
+  <div class = "video-page">
+      <center>
+      <video width="960" height="720" controls>
+          <source src="assets/img/thumbnails/video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+      <h3>Saying sorry - 2</h3>
+      </center>
+  </div>
+</main> */
