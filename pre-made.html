@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet'>
+  <meta name = "viewport" content = "width-device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/ff0acd2dc3.js" crossorigin="anonymous"></script>
+  <title>test</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ripple.css">
+  <script src="ripple.js"></script>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src = "script.js"></script>
+
+
+</head>
+
+<body>
+    <div class="home-button">
+        <a href="index.html">
+        <i class="fa fa-home"></i>
+        </a>
+    </div>
+    
+  <!-- Header -->
+  <div class="header" id = "myHeader">
+    <!-- <button onclick="location.href = 'index.html'"> -->
+        <h1>Name</h1>
+    <!-- </button> -->
+  </div>
+
+  <div class = "content">
+  <div class = "pathways-container">
+    <div class = "pathways-container-title">
+      <h1>Pathways</h1>
+    </div>
+    <div class = "row" id="above">
+      <div class="container-wrapper">
+        <button onclick = "location.href = 'pre-made.html';">
+        <div class="container1 pre-made-container"  id = "active">
+          <h2 class = "title">Pre-made</h2>
+          <div class="overlay"></div>
+          <p class = "text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus magna sit amet purus pulvinar, ut iaculis eros mollis. Aenean non nunc lacus. Quisque velit tellus, mollis fermentum elit sed, vestibulum pharetra lorem. </p>
+        </div>
+      </button>
+      <button>
+        <div class="container1 customise-container">
+          <h2 class = "title">Customise</h2>
+          <div class="overlay"></div>
+          <p class = "text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus magna sit amet purus pulvinar, ut iaculis eros mollis. Aenean non nunc lacus. Quisque velit tellus, mollis fermentum elit sed, vestibulum pharetra lorem. </p>
+        </div> 
+      </button>       
+      </div>
+    </div>
+  </div>
+  <div class = "categories">
+    <div class="catbox">Box 1</div>
+    <div class="catbox">Box 2</div>
+    <div class="catbox">Box 3</div>
+    <div class="catbox">Box 4</div>
+  </div>
+  <div class = "sample">
+    <div class="box">
+        <div id="tree-container">
+          <div class="node first-layer">
+            
+            <div class="node-content">Node 1</div>
+            <div class="connector1">
+              <div class = "connector1line1"></div>
+              <div class = "connector1line2"></div>
+              <div class = "connector1line3"></div>
+            </div>
+            <div class="second-layer">
+              <div class="node" onclick="showPopup()">
+                <div class="node-content">Node 2</div>
+                <div class="connector2">
+                  <div class = "connectorline1"></div>
+                  <div class = "connectorline2"></div>
+                  <div class = "connectorline3"></div>
+                </div>
+                <div class="third-layer">
+                  <div class="node">
+                    <div class="node-content">Node 4</div>
+                  </div>
+                  <div class="node">
+                    <div class="node-content">Node 5</div>
+                  </div>
+                  <div class="node">
+                    <div class="node-content">Node 6</div>
+                  </div>
+                </div>
+              </div>
+              <div class="node">
+                <div class="node-content">Node 3</div>
+                <div class="connector2">
+                  <div class = "connectorline1"></div>
+                  <div class = "connectorline2"></div>
+                  <div class = "connectorline3"></div>
+                </div>
+                <div class="third-layer">
+                  <div class="node">
+                    <div class="node-content">Node 7</div>
+                  </div>
+                  <div class="node">
+                    <div class="node-content">Node 8</div>
+                  </div>
+                  <div class="node">
+                    <div class="node-content">Node 9</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div id="popup-container" class="hidden">
+        <div class="popup">
+          <div class="popup-banner">Name</div>
+          <div class="popup-content">
+            <div class="popup-row">
+              <div class="popup-section">
+                <div class="popup-section-title">1. Name</div>
+                <div class="popup-rounded-box"></div>
+              </div>
+              <div class="popup-section">
+                <div class="popup-section-title">Skill List</div>
+                <div class="popup-skills">
+                  <div class="popup-skill">Skill 1</div>
+                  <div class="popup-skill">Skill 2</div>
+                  <div class="popup-skill">Skill 3</div>
+                  <div class="popup-skill">Skill 4</div>
+                  <div class="popup-skill">Skill 5</div>
+                  <div class="popup-skill">Skill 6</div>
+                </div>
+              </div>
+              <div class="popup-section">
+                <div class="popup-section-title">Khan Academy</div>
+                <div class="popup-rounded-box-1"></div>
+                <a class="popup-link" href="#">Link</a>
+              </div>
+            </div>
+            <div class="popup-row">
+              <div class="popup-section">
+                <div class="popup-section-title">2. Name</div>
+                <div class="popup-rounded-box"></div>
+              </div>
+              <div class="popup-section">
+                <div class="popup-section-title">Skill List</div>
+                <div class="popup-skills">
+                  <div class="popup-skill">Skill 1</div>
+                  <div class="popup-skill">Skill 2</div>
+                  <div class="popup-skill">Skill 3</div>
+                  <div class="popup-skill">Skill 4</div>
+                  <div class="popup-skill">Skill 5</div>
+                  <div class="popup-skill">Skill 6</div>
+                </div>
+              </div>
+              <div class="popup-section">
+                <div class="popup-section-title">Khan Academy</div>
+                <div class="popup-rounded-box-1"></div>
+                <a class="popup-link" href="#">Link</a>
+              </div>
+            </div>
+            <div class="popup-row">
+              <div class="popup-section">
+                <div class="popup-section-title">3. Name</div>
+                <div class="popup-rounded-box"></div>
+              </div>
+              <div class="popup-section">
+                <div class="popup-section-title">Skill List</div>
+                <div class="popup-skills">
+                  <div class="popup-skill">Skill 1</div>
+                  <div class="popup-skill">Skill 2</div>
+                  <div class="popup-skill">Skill 3</div>
+                  <div class="popup-skill">Skill 4</div>
+                  <div class="popup-skill">Skill 5</div>
+                  <div class="popup-skill">Skill 6</div>
+                </div>
+              </div>
+              <div class="popup-section">
+                <div class="popup-section-title">Khan Academy</div>
+                <div class="popup-rounded-box-1"></div>
+                <a class="popup-link" href="#">Link</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+      <div class="sample-container">
+    <h1 class="title1">Title</h1>
+    <p class="text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius quam quis ex hendrerit, vel varius turpis accumsan. Nulla facilisi.
+    </p>
+    </div>
+  </div>
+
+
+<!-- <div class="sample">
+    <div class="box">
+      <div class="tree-container">
+        <div class="tree">
+          <div class="layer">
+            <div class="node" id="node1">Node 1</div>
+          </div>
+          <div class="connector">
+            <div class="vertical-line"></div>
+            <div class="layer">
+              <div class="node" id="node2">Node 2</div>
+              <div class="node" id="node3">Node 3</div>
+            </div>
+            <div class="vertical-line"></div>
+          </div>
+          <div class="connector">
+            <div class="horizontal-line"></div>
+          </div>
+          <div class="connector">
+            <div class="vertical-line"></div>
+            <div class="layer">
+              <div class="node" id="node4">Node 4</div>
+              <div class="node" id="node5">Node 5</div>
+              <div class="node" id="node6">Node 6</div>
+            </div>
+            <div class="vertical-line"></div>
+          </div>
+          <div class="connector">
+            <div class="horizontal-line"></div>
+          </div>
+          <div class="connector">
+            <div class="vertical-line"></div>
+            <div class="layer">
+              <div class="node" id="node7">Node 7</div>
+              <div class="node" id="node8">Node 8</div>
+              <div class="node" id="node9">Node 9</div>
+            </div>
+            <div class="vertical-line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</div>
+  </div>
+ 
+
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script>
+    window.onscroll = function() {myFunction()};
+
+    var header = document.getElementById("myHeader");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+  }
+//   const nodes = document.querySelectorAll('.node-content');
+// let zoomLevel = 1;
+
+// nodes.forEach((node) => {
+//   node.addEventListener('click', () => {
+//     // Handle click event for each node (custom behavior)
+//     // For zooming, we will use the zoomIn and zoomOut functions.
+//     zoomIn();
+//   });
+// });
+
+// function zoomIn() {
+//   zoomLevel += 0.1; // Increase the zoom level
+//   applyZoom();
+// }
+
+// function zoomOut() {
+//   zoomLevel -= 0.1; // Decrease the zoom level
+//   applyZoom();
+// }
+
+// function applyZoom() {
+//   const treeContainer = document.getElementById('tree-container');
+//   treeContainer.style.transform = `scale(${zoomLevel})`;
+// }
+
+// You can call the zoomOut function when you want to zoom out.
+  function showPopup() {
+    document.getElementById('popup-container').style.display = 'block';
+  }
+
+  function closePopup(event) {
+      if (event.target.id === 'popup-container') {
+        document.getElementById('popup-container').style.display = 'none';
+      }
+    }
+
+    document.addEventListener('click', closePopup);
+
+  </script>
+    <footer>
+      <p>Author: Name<br>
+      <a>Copyright @name - all rights reserved</a></p>
+    </footer>
+</body>
+
+
+</html>
+
+
+
