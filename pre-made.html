@@ -24,7 +24,7 @@
   <!-- Header -->
   <div class="header" id = "myHeader">
     <!-- <button onclick="location.href = 'index.html'"> -->
-        <h1>Name</h1>
+        <h1>PROJEKT SkillTree</h1>
     <!-- </button> -->
   </div>
 
@@ -39,31 +39,33 @@
         <div class="container1 pre-made-container"  id = "active">
           <h2 class = "title">Pre-made</h2>
           <div class="overlay"></div>
-          <p class = "text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus magna sit amet purus pulvinar, ut iaculis eros mollis. Aenean non nunc lacus. Quisque velit tellus, mollis fermentum elit sed, vestibulum pharetra lorem. </p>
+          <p class = "text">Discover our curated selection of premade skill trees—a perfect starting point to test-drive PROJEKT SkillTree. These expertly crafted pathways provide a glimpse into our service's potential, allowing users to explore and provide feedback for continual enhancements. 
+
+          </p>
         </div>
       </button>
       <button>
         <div class="container1 customise-container">
           <h2 class = "title">Customise</h2>
           <div class="overlay"></div>
-          <p class = "text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus magna sit amet purus pulvinar, ut iaculis eros mollis. Aenean non nunc lacus. Quisque velit tellus, mollis fermentum elit sed, vestibulum pharetra lorem. </p>
+          <p class = "text">Experience the heart of PROJEKT SkillTree with our bespoke, AI-driven feature: Customise. Input your desired topic into our intuitive search bar and watch the magic happen. Our AI will conjure up a tailored skill tree, intricately designed to chart your unique educational trajectory. </p>
         </div> 
       </button>       
       </div>
     </div>
   </div>
   <div class = "categories">
-    <div class="catbox">Box 1</div>
-    <div class="catbox">Box 2</div>
-    <div class="catbox">Box 3</div>
-    <div class="catbox">Box 4</div>
+    <div class="catbox active" id="active">Architecture</div>
+    <div class="catbox">Astronomy</div>
+    <div class="catbox">JavaScript</div>
+    <div class="catbox">Dance</div>
   </div>
   <div class = "sample">
     <div class="box">
         <div id="tree-container">
           <div class="node first-layer">
             
-            <div class="node-content">Node 1</div>
+            <div class="node-content">Introduction to Architecture</div>
             <div class="connector1">
               <div class = "connector1line1"></div>
               <div class = "connector1line2"></div>
@@ -71,7 +73,7 @@
             </div>
             <div class="second-layer">
               <div class="node" onclick="showPopup()">
-                <div class="node-content">Node 2</div>
+                <div class="node-content">Architecture Types</div>
                 <div class="connector2">
                   <div class = "connectorline1"></div>
                   <div class = "connectorline2"></div>
@@ -79,18 +81,18 @@
                 </div>
                 <div class="third-layer">
                   <div class="node">
-                    <div class="node-content">Node 4</div>
+                    <div class="node-content">Intermediate Architecture</div>
                   </div>
                   <div class="node">
-                    <div class="node-content">Node 5</div>
+                    <div class="node-content">Intro to Design Studio</div>
                   </div>
                   <div class="node">
-                    <div class="node-content">Node 6</div>
+                    <div class="node-content">Intro to Architectural Theory</div>
                   </div>
                 </div>
               </div>
               <div class="node">
-                <div class="node-content">Node 3</div>
+                <div class="node-content">Intro to Spatial Design</div>
                 <div class="connector2">
                   <div class = "connectorline1"></div>
                   <div class = "connectorline2"></div>
@@ -98,13 +100,13 @@
                 </div>
                 <div class="third-layer">
                   <div class="node">
-                    <div class="node-content">Node 7</div>
+                    <div class="node-content">Intermediate Spatial Design</div>
                   </div>
                   <div class="node">
-                    <div class="node-content">Node 8</div>
+                    <div class="node-content">Intro to Urban Planning</div>
                   </div>
                   <div class="node">
-                    <div class="node-content">Node 9</div>
+                    <div class="node-content">Intro to Building Design</div>
                   </div>
                 </div>
               </div>
@@ -113,53 +115,52 @@
       </div>
       <div id="popup-container" class="hidden">
         <div class="popup">
-          <div class="popup-banner">Name</div>
+          <div class="popup-banner">Architecture</div>
           <div class="popup-content">
             <div class="popup-row">
               <div class="popup-section">
-                <div class="popup-section-title">1. Name</div>
-                <div class="popup-rounded-box"></div>
+                <div class="popup-section-title">1. Architecture and Design</div>
+                <div class="popup-rounded-box">Delves into the intersection of architectural movements and design aesthetics from the period of 1900-1980. It covers various influential styles and structures from the Vienna Secession, Chicago School, to International Style.</div>
               </div>
               <div class="popup-section">
                 <div class="popup-section-title">Skill List</div>
                 <div class="popup-skills">
-                  <div class="popup-skill">Skill 1</div>
-                  <div class="popup-skill">Skill 2</div>
-                  <div class="popup-skill">Skill 3</div>
-                  <div class="popup-skill">Skill 4</div>
-                  <div class="popup-skill">Skill 5</div>
-                  <div class="popup-skill">Skill 6</div>
+                  <div class="popup-skill">Architectural Design Understanding</div>
+                  <div class="popup-skill">Modernism Era Insights</div>
+                  <div class="popup-skill">Structural Analysis Skills</div>
+                  <div class="popup-skill">Urban Design Awareness</div>
+                  <div class="popup-skill">Building Functionality Assessment</div>
+                  <div class="popup-skill">Architectural Style Identification</div>
                 </div>
               </div>
               <div class="popup-section">
                 <div class="popup-section-title">Khan Academy</div>
-                <div class="popup-rounded-box-1"></div>
-                <a class="popup-link" href="#">Link</a>
+                <div class="popup-rounded-box-1">Khan Academy is a free online educational platform offering lessons in various subjects, empowering learners to study at their own pace. Through engaging, video-based courses, it democratizes access to education worldwide.</div>
+                <a class="popup-link" href="https://www.khanacademy.org/humanities/art-1010/architecture-design">Go!</a>
               </div>
             </div>
             <div class="popup-row">
               <div class="popup-section">
-                <div class="popup-section-title">2. Name</div>
-                <div class="popup-rounded-box"></div>
+                <div class="popup-section-title">2. Architecture A to Z [Guide to Popular Concepts]</div>
+                <div class="popup-rounded-box">This video serves as a comprehensive guide demystifying architecture jargon from A to Z. By defining 26 common terms, it bridges the verbal communication gap in understanding complex architectural principles.</div>
               </div>
               <div class="popup-section">
                 <div class="popup-section-title">Skill List</div>
                 <div class="popup-skills">
-                  <div class="popup-skill">Skill 1</div>
-                  <div class="popup-skill">Skill 2</div>
-                  <div class="popup-skill">Skill 3</div>
-                  <div class="popup-skill">Skill 4</div>
-                  <div class="popup-skill">Skill 5</div>
-                  <div class="popup-skill">Skill 6</div>
+                  <div class="popup-skill">Architectural Vocabulary Expansion</div>
+                  <div class="popup-skill">Enhanced Verbal Communication</div>
+                  <div class="popup-skill">Understanding Spatial Principles</div>
+                  <div class="popup-skill">Grasping Geometric Concepts</div>
+                  <div class="popup-skill">Recognizing Architectural Elements</div>
                 </div>
               </div>
               <div class="popup-section">
-                <div class="popup-section-title">Khan Academy</div>
-                <div class="popup-rounded-box-1"></div>
-                <a class="popup-link" href="#">Link</a>
+                <div class="popup-section-title">Youtube</div>
+                <div class="popup-rounded-box-1">YouTube is a free online platform for sharing and viewing videos, offering a space for creators to broadcast content to a global audience. It hosts a vast array of topics, fostering community and learning through multimedia.</div>
+                <a class="popup-link" href="https://www.youtube.com/watch?v=FtGTE3qJvWY">Go!</a>
               </div>
             </div>
-            <div class="popup-row">
+            <!-- <div class="popup-row">
               <div class="popup-section">
                 <div class="popup-section-title">3. Name</div>
                 <div class="popup-rounded-box"></div>
@@ -180,16 +181,17 @@
                 <div class="popup-rounded-box-1"></div>
                 <a class="popup-link" href="#">Link</a>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
       
     </div>
       <div class="sample-container">
-    <h1 class="title1">Title</h1>
+    <h1 class="title1">Architecture</h1>
     <p class="text">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius quam quis ex hendrerit, vel varius turpis accumsan. Nulla facilisi.
+      Explore the world of Architecture, where you'll uncover the art and science of designing and constructing spaces that shape our lives. From iconic structures to sustainable designs, go on a comprehensive journey through the creative and technical aspects of this captivating field with the knowledge to design the future.
+
     </p>
     </div>
   </div>
@@ -297,8 +299,8 @@
 
   </script>
     <footer>
-      <p>Author: Name<br>
-      <a>Copyright @name - all rights reserved</a></p>
+      <p>Author: Hana & Shaun Chen<br>
+      <a>Copyright @PROJEKTSkillTree - all rights reserved</a></p>
     </footer>
 </body>
 

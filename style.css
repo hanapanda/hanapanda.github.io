@@ -279,6 +279,10 @@ button {
   display: flex;
 }
 
+
+.membership-container .container .text {
+  text-align: center;
+}
 /* Your existing styles */
 
 .membership-container  .text {
@@ -514,6 +518,15 @@ svg {
   margin-bottom: 0em;
 }
 
+.img-container img {
+  width: 20em;
+  height: 20em;
+}
+
+.about-us-container .text {
+  text-align: left;
+  margin: 20px;
+}
 
 
 /* Add these styles */
@@ -745,7 +758,7 @@ button {
 .node {
   display: flex;
   align-items: center;
-  margin: 1em;
+  margin: 0.5em;
 }
 
 .node-content {
@@ -760,7 +773,7 @@ button {
 
 .connector1 {
   width: 0.5em;
-  height: 28em;
+  height: 38em;
   background-color: #456F49;
   margin: 0 2em;
 }
@@ -802,7 +815,7 @@ button {
   width: 3em;
   height: 0.5em;
   background-color: #456F49;
-  margin: 27em 0em;
+  margin: 37em 0em;
 }
 .connectorline0 {
   width: 3em;
@@ -902,6 +915,8 @@ button {
   border-radius: 5px; */
   /* margin-right: 10px; */
   background: #f9f9f9;
+  font-size: 17px;
+  
 }
 
 .popup-section-title {
@@ -911,6 +926,8 @@ button {
 
 .popup-skills {
   margin-top: 5px;
+  font-size: 17px;
+  padding: 2px;
 }
 
 .popup-skill {
@@ -931,15 +948,19 @@ button {
 .popup-rounded-box {
   border: 1px solid #357542;
   border-radius: 5px;
-  height: 250px;
+  height: 300px;
   margin: 10px;
+  padding: 10px;
+  font-size: 17px;
 }
 
 .popup-rounded-box-1 {
   border: 1px solid #357542;
   border-radius: 5px;
-  height: 200px;
+  height: 270px;
   margin: 10px;
+  padding: 10px;
+  font-size: 16px;
 }
 /* end of popup */
 /* start of footer */
@@ -1024,3 +1045,11 @@ footer {
 }
 
 
+.catbox .active {
+  background: #446c50;
+}
+
+.catbox #active {
+  background: #446c50;
+  border: 0.3em solid #758F78;
+}
