@@ -1,217 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet'>
-  <meta name = "viewport" content = "width-device-width, initial-scale=1.0">
-  <title>PROJEKT SkillTree</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="ripple.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Consumption Self-Audit</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- Header -->
-  <div class="header" id = "myHeader">
-    <h1>PROJEKT SkillTree</h1>
-  </div>
+<div class="container">
+    <h1>Sustainable Consumption Self-Audit</h1>
+    <form id="auditForm">
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Score (1-5)</th>
+            </tr>
 
-  <!-- Body -->
-  <div class = "content">
-      <!-- Intro -->
-    <div class = "intro-container">
-      <div class = "intro-container-title">
-        <h1>Work Hard… And Smart.</h1>
-      </div>
-      <div class = "intro-container-content">
-        <h2>Revolutionising <span class = "auto-type"></span></h2>
-      </div>
-      <div class = "intro-container-text">
-        <p>Introducing PROJEKT SkillTree: the revolutionary learning hub equipped with cutting-edge AI to sculpt personalized skill-trees, guiding self-study with unprecedented efficiency. Our unique platform empowers learners by generating tailored educational pathways that adapt to individual needs and goals, removing redundancy and bridging gaps. In collaboration with orphanages and organizations serving teens with disabilities, PROJEKT SkillTree ensures that every young mind, regardless of circumstance, has access to a customized, engaging, and accessible learning journey. Join us in redefining educational landscapes and unlocking potential, one skill-tree at a time.
+            <!-- Food -->
+            <tr><td><b>Food</b></td></tr>
+            <tr><td>Local & Seasonal: Do you prioritize buying local and seasonal produce?</td><td><input type="number" min="1" max="5" id="score1"></td></tr>
+            <tr><td>Waste Reduction: Do you minimize food waste through mindful shopping and proper storage?</td><td><input type="number" min="1" max="5" id="score2"></td></tr>
+            <tr><td>Packaging: Do you prioritize sustainably packaged food to avoid single-use plastic?</td><td><input type="number" min="1" max="5" id="score3"></td></tr>
+            <tr><td>Plant-Based: Do you incorporate plant-based meals and reduce meat consumption?</td><td><input type="number" min="1" max="5" id="score4"></td></tr>
+            <tr><td>Composting: Do you compost at home?</td><td><input type="number" min="1" max="5" id="score5"></td></tr>
 
-        </p>
-      </div>
-    </div>
+            <!-- Drinks -->
+            <tr><td><b>Drinks</b></td></tr>
+            <tr><td>Reusable Bottles: Do you use reusable water bottles and coffee cups?</td><td><input type="number" min="1" max="5" id="score6"></td></tr>
+            <tr><td>Bulk Purchases: Do you opt for bulk purchases to minimize packaging waste?</td><td><input type="number" min="1" max="5" id="score7"></td></tr>
+            <tr><td>Sustainable Options: Do you choose beverages with minimal or recyclable packaging?</td><td><input type="number" min="1" max="5" id="score8"></td></tr>
 
-    <!-- Pathways -->
-    <div class = "pathways-container">
-      <div class = "pathways-container-title">
-        <h1>Pathways</h1>
-      </div>
-      <div class = "row" id="above">
-        <div class="container-wrapper">
-          <button onclick = "location.href = 'pre-made.html';">
-          <div class="container pre-made-container">
-            <h2 class = "title">Pre-made</h2>
-            <div class="overlay"></div>
-            <p class = "text">Discover our curated selection of premade skill trees—a perfect starting point to test-drive PROJEKT SkillTree. These expertly crafted pathways provide a glimpse into our service's potential, allowing users to explore and provide feedback for continual enhancements. 
+            <!-- Clothing -->
+            <tr><td><b>Clothing</b></td></tr>
+            <tr><td>Quality & Durability: Do you invest in high-quality, durable clothing items to avoid fast fashion?</td><td><input type="number" min="1" max="5" id="score9"></td></tr>
+            <tr><td>Second-hand & Upcycling: Do you prioritize buying second-hand clothing or upcycling existing items?</td><td><input type="number" min="1" max="5" id="score10"></td></tr>
+            <tr><td>Ethical Production: Do you support brands that prioritize ethical production practices?</td><td><input type="number" min="1" max="5" id="score11"></td></tr>
 
-            </p>
-          </div>
-        </button>
-        <button>
-          <div class="container customise-container">
-            <h2 class = "title">Customise</h2>
-            <div class="overlay"></div>
-            <p class = "text">Experience the heart of PROJEKT SkillTree with our bespoke, AI-driven feature: Customise. Input your desired topic into our intuitive search bar and watch the magic happen. Our AI will conjure up a tailored skill tree, intricately designed to chart your unique educational trajectory.  </p>
-          </div> 
-        </button>       
-        </div>
-      </div>
-    </div>
+            <!-- Personal Cleaning -->
+            <tr><td><b>Personal Cleaning</b></td></tr>
+            <tr><td>Minimal Packaging: Do you choose products with minimal or biodegradable packaging?</td><td><input type="number" min="1" max="5" id="score12"></td></tr>
+            <tr><td>Natural Ingredients: Do you prioritize products with natural and sustainable ingredients?</td><td><input type="number" min="1" max="5" id="score13"></td></tr>
+            <tr><td>Homemade: Do you make any bathroom products yourself to reduce waste?</td><td><input type="number" min="1" max="5" id="score14"></td></tr>
 
-    <!-- Membership -->
-    <div class="membership-container">
-      <div class="membership-container-title">
-        <h1>Membership</h1>
-      </div>
-      <div class="row" id="above">
-        <div class="container-wrapper">
-          <div class="container free-container">
-            <h2 class="title">Free</h2>
-            <div class="text">
-              <p>Temporary</p>
-              <p>GPT 3.5</p>
-              <p>Alternative Routes</p>
-            </div>
-            <!-- <button class="button">Begin learning</button> -->
-              <div class="buttons">
-                <button class="blob-btn">
-                  Start Learning!
-                  <span class="blob-btn__inner">
-                    <span class="blob-btn__blobs">
-                      <span class="blob-btn__blob"></span>
-                      <span class="blob-btn__blob"></span>
-                      <span class="blob-btn__blob"></span>
-                      <span class="blob-btn__blob"></span>
-                    </span>
-                  </span>
-                </button>
-                <br/>
-              
-              <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-                <defs>
-                  <filter id="goo">
-                    <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
-                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
-                    <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
-                  </filter>
-                </defs>
-              </svg>
-            </div>
-          </div>
-          <div class="container pro-container">
-            <h2 class="title">Pro</h2>
-            <div class="text">
-              <p>Dashboard</p>
-              <p>GPT 4</p>
-              <p>Career Tracking</p>
-            </div>
-            <div class="buttons">
-              <button class="blob-btn">
-                Start Learning!
-                <span class="blob-btn__inner">
-                  <span class="blob-btn__blobs">
-                    <span class="blob-btn__blob"></span>
-                    <span class="blob-btn__blob"></span>
-                    <span class="blob-btn__blob"></span>
-                    <span class="blob-btn__blob"></span>
-                  </span>
-                </span>
-              </button>
-              <br/>
-            
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-              <defs>
-                <filter id="goo">
-                  <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
-                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
-                  <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
-                </filter>
-              </defs>
-            </svg>
-          </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- About us -->
+            <!-- Household Cleaning Supplies -->
+            <tr><td><b>Household Cleaning Supplies</b></td></tr>
+            <tr><td>DIY & Natural: Do you make your own cleaning products using natural ingredients?</td><td><input type="number" min="1" max="5" id="score15"></td></tr>
+            <tr><td>Reusable Alternatives: Do you use reusable cloths and sponges instead of disposable ones?</td><td><input type="number" min="1" max="5" id="score16"></td></tr>
+            <tr><td>Eco-Friendly Products: Do you choose eco-friendly cleaning products?</td><td><input type="number" min="1" max="5" id="score17"></td></tr>
 
-    <div class="about-us-container">
-      <div class="about-us-title">
-        <h1>About Us</h1>
-      </div>
-      <div class="row">
-        <div class = "container-wrapper">
-          <div class="img-container">
-            <img src="shaun-image.png" alt="Team Member" class="about-us-image">
-          </div>
-          <div class="container">
-            <p class = "text">Shaun Chen is an entrepreneur with a passion for innovation. He is a shining example of ambition and drive: he seizes opportunities and turns ideas into successful ventures. He hopes to make a significant impact beyond his community in the future.</p>
-            <h2 class = "name">| Shaun Chen, CEO</h2>
-          </div>
-        </div>
-        <div class = "container-wrapper">
-          <div class="img-container">
-            <img src="hana-image.JPG" alt="Team Member" class="about-us-image">
-          </div>
-          <div class="container">
-            <p class = "text">Hana Chen is an aspiring computer scientist with a passion in the development of new technology. She harnesses technology to drive innovation and growth, and hopes to apply her skills for the communitry.</p>
-            <h2 class = "name">| Hana Chen, CTO</h2>
-          </div>
-        </div>
-      </div>
-    </div>
+            <!-- Electronics -->
+            <tr><td><b>Electronics</b></td></tr>
+            <tr><td>Refurbished & Repair: Do you prioritize buying refurbished electronics or repairing existing devices?</td><td><input type="number" min="1" max="5" id="score18"></td></tr>
+            <tr><td>Responsible Recycling: Do you recycle old electronics responsibly?</td><td><input type="number" min="1" max="5" id="score19"></td></tr>
+            <tr><td>Mindful Consumption: Do you consider the environmental impact of purchasing new electronics?</td><td><input type="number" min="1" max="5" id="score20"></td></tr>
 
-    
-    <!-- Contact us -->
-    <div class="contact-us-container">
-      <div class="contact-us-title">
-        <h1>Contact Us</h1>
-      </div>
-      <p>Got a question? Message <a href="mailto:Chenshaun@outlook.com">Chenshaun@outlook.com</a></p>
-    </div>
-    
-    
+        </table>
 
+        <button type="button" onclick="calculateScore()">Calculate Final Score</button>
+    </form>
 
-  </div>
- 
+    <div class="result" id="result"></div>
+</div>
 
-  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-  <script>
-    var typed = new Typed(".auto-type", {
-      strings: ['Learning', 'Pathways', 'Life'],
-      typeSpeed: 100,
-      backSpeed: 50,
-      loop: true,
-      showCursor: false
-    })
+<script src="script.js"></script>
 
-    window.onscroll = function() {myFunction()};
-
-    var header = document.getElementById("myHeader");
-    var sticky = header.offsetTop;
-    function myFunction() {
-      if (window.pageYOffset > sticky) {
-        header.classList.add("sticky");
-      } else {
-        header.classList.remove("sticky");
-      }
-  }
-
-
-  </script>
-    
-    <footer>
-      <p>Hana & Shaun Chen<br>
-      <a>Copyright @PROJEKTSkillTree - all rights reserved</a></p>
-    </footer>
 </body>
-
-
 </html>
-
-
-
