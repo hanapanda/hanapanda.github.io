@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hana's Soup Review</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cafe Awnings (above overlay) -->
+    <div class="awning top-awning"></div>
+    <div class="awning bottom-awning"></div>
+
+    <!-- Review Receipt for Tomato Soup (above overlay) -->
+    <div class="review-receipt" id="tomatoReview">
+        <h3>USER REVIEWS</h3>
+        <div class="review-content">
+            <p>Kylie Jenner<br>"Toma" - Rating: 7/5</p>
+            <div class="dotted-line"></div>
+            <p>Mano Gay<br>"Mushroom better" - Rating: 3/5</p>
+            <div class="dotted-line"></div>
+            <p>crime rat<br>"they’re too red" - Rating: 5/5</p>
+            <div class="dotted-line"></div>
+        </div>
+        <button class="close-btn" onclick="hideReview('tomatoReview')">Close</button>
+    </div>
+
+    <!-- Semi-Transparent Purple Overlay to cover only soup review section -->
+    <div class="overlay" id="overlay"></div>
+
+    <div class="container" id="main-content">
+        <header>
+            <h1>Hana's <span class="highlight">SOUP</span> Review</h1>
+            <p class="subtitle">the only reliable rating of good soup.</p>
+        </header>
+        
+        <!-- Soup Slider (central review section) -->
+        <div class="soup-slider" id="soup-review">
+            <button class="arrow left-arrow" onclick="prevSoup()">&#10094;</button>
+            <div class="soup" id="soup-container">
+                <div class="soup-info">
+                    <h2 id="soup-name">Tomato</h2>
+                    <div class="stars" data-rating="5"></div>
+                    <p class="description" id="soup-description">I love this soup so much I could marry this soup. Usually, I hate tomato but tomato soup? I would kill for it (hypothetical).</p>
+                    <div class="comment-box">
+                        <h3>Leave a Comment:</h3>
+                        <textarea placeholder="Write your thoughts here..."></textarea>
+                        <button class="submit-btn">Submit</button>
+                    </div>
+                </div>
+                <img src="images/tomato.jpg" alt="Tomato Soup" class="soup-img" id="soup-img">
+            </div>
+            <button class="arrow right-arrow" onclick="nextSoup()">&#10095;</button>
+        </div>
+
+        <!-- Friend Reviews Button -->
+        <button class="review-btn" onclick="showReview('tomatoReview')">Friend Reviews</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
