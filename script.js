@@ -4,17 +4,18 @@ const soups = [
         name: "Tomato",
         rating: 5,
         description: "I love this soup so much I could marry this soup. Usually, I hate tomato but tomato soup? I would kill for it (hypothetical).",
-        img: "images/tomato.jpg",
+        img: "images/tomato.png",
         reviews: [
-            { user: "Tommy Taster", comment: "Best tomato soup ever!", rating: "5/5" },
-            { user: "Soup Lover", comment: "It’s just so rich and creamy!", rating: "5/5" }
+            { user: "Kylie Jenner", comment: "Toma", rating: "7/5" },
+            { user: "Mano Gay", comment: "Mushroom better", rating: "3/5" },
+            { user: "crime rat", comment: "they're too red", rating: "5/5"}
         ]
     },
     {
         name: "Corn & Pork",
         rating: 4,
         description: "This is my second favourite soup. The corn and pork combination is perfection.",
-        img: "images/corn_pork.jpg",
+        img: "images/cornpork.png",
         reviews: [
             { user: "AHHHHHH", comment: "It's just good", rating: "5/5" },
             { user: "Mano Gay", comment: "Best soup to be ever invented omg. nom nom.", rating: "5/5" },
