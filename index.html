@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hana's Soup Review</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Cafe Awnings (above overlay) -->
     <div class="awning top-awning"></div>
     <div class="awning bottom-awning"></div>
 
-    <!-- Review Receipt for Tomato Soup (above overlay) -->
     <div class="review-receipt" id="tomatoReview">
         <h3>USER REVIEWS</h3>
         <div class="review-content">
@@ -25,7 +27,6 @@
         <button class="close-btn" onclick="hideReview('tomatoReview')">Close</button>
     </div>
 
-    <!-- Semi-Transparent Purple Overlay to cover only soup review section -->
     <div class="overlay" id="overlay"></div>
 
     <div class="container" id="main-content">
@@ -34,7 +35,6 @@
             <p class="subtitle">the only reliable rating of good soup.</p>
         </header>
         
-        <!-- Soup Slider (central review section) -->
         <div class="soup-slider" id="soup-review">
             <button class="arrow left-arrow" onclick="prevSoup()">&#10094;</button>
             <div class="soup" id="soup-container">
@@ -53,7 +53,6 @@
             <button class="arrow right-arrow" onclick="nextSoup()">&#10095;</button>
         </div>
 
-        <!-- Friend Reviews Button -->
         <button class="review-btn" onclick="showReview('tomatoReview')">Friend Reviews</button>
     </div>
 

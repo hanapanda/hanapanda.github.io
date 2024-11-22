@@ -8,7 +8,9 @@ const soups = [
         reviews: [
             { user: "Kylie Jenner", comment: "Toma", rating: "7/5" },
             { user: "Mano Gay", comment: "Mushroom better", rating: "3/5" },
-            { user: "crime rat", comment: "they're too red", rating: "5/5"}
+            { user: "crime rat", comment: "they're too red", rating: "5/5"},
+            { user: "souperMAN", comment: "this particular tomahto soup has the vim?? of summer, encapsulated in the sweety tanginess of fresh herbs and spices, blended together expertly by the hand of whatever chef was responsible for it.", rating: "4.5/5"},
+            { user: "angelina ballerina", comment: "10/10 tastes like tomatoes", rating: "5/5"}
         ]
     },
     {
@@ -22,7 +24,7 @@ const soups = [
             { user: "crime rat", comment: "miso miso mi so hungry", rating: "5/5" }
         ]
     },
-    // Add more soups as needed
+    //soups go here
 ];
 
 function showReview() {
@@ -30,22 +32,18 @@ function showReview() {
     const overlay = document.getElementById('overlay');
     const reviews = soups[currentSoup].reviews;
 
-    // Clear existing reviews
     reviewContainer.innerHTML = '';
 
-    // Add reviews for the current soup
     reviews.forEach(review => {
         const reviewElement = document.createElement("p");
         reviewElement.innerHTML = `${review.user}<br>"${review.comment}" - Rating: ${review.rating}`;
         reviewContainer.appendChild(reviewElement);
         
-        // Add dotted line
         const dottedLine = document.createElement("div");
         dottedLine.classList.add("dotted-line");
         reviewContainer.appendChild(dottedLine);
     });
 
-    // Show the overlay and the review receipt
     overlay.classList.add('active');
     const receipt = document.querySelector('.review-receipt');
     receipt.style.display = 'block';
@@ -64,7 +62,6 @@ function updateSoup() {
     const soup = soups[currentSoup];
     const soupContainer = document.getElementById("soup-container");
 
-    // Fade-out effect
     soupContainer.style.opacity = 0;
     setTimeout(() => {
         document.getElementById("soup-name").textContent = soup.name;
