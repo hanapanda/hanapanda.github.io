@@ -3,7 +3,7 @@ const soups = [
     {
         name: "Tomato",
         rating: 5,
-        description: "I love this soup so much I could marry this soup. Usually, I hate tomato but tomato soup? I would kill for it (hypothetical).",
+        description: "usually, I hate tomato but tomato soup? I would kill for it (hypothetical).",
         img: "images/tomato.png",
         reviews: [
             { user: "Kylie Jenner", comment: "Toma", rating: "7/5" },
@@ -16,7 +16,7 @@ const soups = [
     {
         name: "Corn & Pork",
         rating: 4,
-        description: "This is my second favourite soup. The corn and pork combination is perfection.",
+        description: "This is such a comfort soup. but i dont like eating the corn",
         img: "images/cornpork.png",
         reviews: [
             { user: "AHHHHHH", comment: "It's just good", rating: "5/5" },
@@ -24,7 +24,7 @@ const soups = [
             { user: "crime rat", comment: "miso miso mi so hungry", rating: "5/5" }
         ]
     },
-    //soups go here
+
 ];
 
 function showReview() {
@@ -82,4 +82,73 @@ function prevSoup() {
     updateSoup();
 }
 
-document.addEventListener("DOMContentLoaded", updateSoup);
+// open modal
+function openModal() {
+    const modal = document.getElementById("review-modal");
+    const overlay = document.getElementById("overlay");
+
+    overlay.style.display = 'block';  
+    modal.style.display = 'block';    
+
+    setTimeout(() => {
+        modal.classList.add("active");
+        overlay.classList.add("active");
+    }, 10);  
+}
+
+// close modal
+function closeModal() {
+    const modal = document.getElementById("review-modal");
+    const overlay = document.getElementById("overlay");
+
+    modal.classList.remove("active");
+    overlay.classList.remove("active");
+
+    setTimeout(() => {
+        modal.style.display = "none";
+        overlay.style.display = "none";
+    }, 400);
+}
+
+// submitttt review
+function submitReview() {
+    const userName = document.getElementById("review-name").value.trim();
+    const userComment = document.getElementById("review-text").value.trim();
+    const userRating = document.querySelectorAll(".modal-stars span.active").length;
+
+    if (!userName || !userComment || userRating === 0) {
+        alert("hey you you gotta fill out all fields and select a rating! try again :(");
+        return;
+    }
+
+    soups[currentSoup].reviews.push({
+        user: userName,
+        comment: userComment,
+        rating: `${userRating}/5`
+    });
+
+    closeModal();
+    alert("your review has been added! go to friend reviews to check it out :D");
+}
+
+// modal stars?
+document.querySelectorAll(".modal-stars span").forEach((star, index, stars) => {
+    star.addEventListener("mouseenter", () => {
+       
+        stars.forEach((s, i) => {
+            s.style.color = i <= index ? "#ffd700" : "#d3d3d3";
+        });
+    });
+
+    star.addEventListener("mouseleave", () => {
+        stars.forEach((s) => {
+            s.style.color = s.classList.contains("active") ? "#ffd700" : "#d3d3d3";
+        });
+    });
+
+    star.addEventListener("click", () => {
+        stars.forEach((s, i) => {
+            s.classList.toggle("active", i <= index);
+        });
+    });
+});

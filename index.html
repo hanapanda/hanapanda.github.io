@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hana's Soup Review</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="awning top-awning"></div>
     <div class="awning bottom-awning"></div>
 
+    <!-- Receipt -->
     <div class="review-receipt" id="tomatoReview">
         <h3>USER REVIEWS</h3>
         <div class="review-content">
@@ -24,9 +25,10 @@
             <p>crime rat<br>"they’re too red" - Rating: 5/5</p>
             <div class="dotted-line"></div>
         </div>
-        <button class="close-btn" onclick="hideReview('tomatoReview')">Close</button>
+        <button class="close-btn" onclick="hideReview()">Close</button>
     </div>
 
+    <!-- Overlay (Used for both modals) -->
     <div class="overlay" id="overlay"></div>
 
     <div class="container" id="main-content">
@@ -34,18 +36,16 @@
             <h1>Hana's <span class="highlight">SOUP</span> Review</h1>
             <p class="subtitle">the only reliable rating of good soup.</p>
         </header>
-        
+
         <div class="soup-slider" id="soup-review">
             <button class="arrow left-arrow" onclick="prevSoup()">&#10094;</button>
             <div class="soup" id="soup-container">
                 <div class="soup-info">
                     <h2 id="soup-name">Tomato</h2>
-                    <div class="stars" data-rating="5"></div>
+                    <div class="stars static-stars" data-rating="5"></div>
                     <p class="description" id="soup-description">I love this soup so much I could marry this soup. Usually, I hate tomato but tomato soup? I would kill for it (hypothetical).</p>
                     <div class="comment-box">
-                        <h3>Leave a Comment:</h3>
-                        <textarea placeholder="Write your thoughts here..."></textarea>
-                        <button class="submit-btn">Submit</button>
+                        <button class="submit-btn" onclick="openModal()">Submit review</button>
                     </div>
                 </div>
                 <img src="images/tomato.png" alt="Tomato Soup" class="soup-img" id="soup-img">
@@ -53,9 +53,42 @@
             <button class="arrow right-arrow" onclick="nextSoup()">&#10095;</button>
         </div>
 
-        <button class="review-btn" onclick="showReview('tomatoReview')">Friend Reviews</button>
+        <button class="review-btn" onclick="showReview()">Friend Reviews</button>
+    </div>
+
+    <!-- Modal -->
+    <div class="custom-modal" id="review-modal">
+        <div class="modal-content">
+            <h2>Submit  Your Review!!</h2>
+            <p>disclaimer: this is saved locally and will not remain on the site! if u want it to be on here talk to me in person ^^</p>
+        </n>
+            <div class="form-group">
+                <label for="review-name">username:</label>
+                <input type="text" id="review-name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="review-text">review:</label>
+                <textarea id="review-text" placeholder="write your comments here..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>Your Rating:</label>
+                <div class="stars modal-stars" id="modal-stars">
+                    <span data-value="1">★</span>
+                    <span data-value="2">★</span>
+                    <span data-value="3">★</span>
+                    <span data-value="4">★</span>
+                    <span data-value="5">★</span>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button class="close-modal-btn" onclick="closeModal()">Cancel</button>
+                <button class="submit-modal-btn" onclick="submitReview()">Submit</button>
+                
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>

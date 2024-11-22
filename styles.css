@@ -130,9 +130,6 @@ h1 {
     color: #ffd700;
 }
 
-.stars::before {
-    content: "★★★★★";
-}
 
 .description {
     font-size: 0.95rem;
@@ -281,5 +278,135 @@ h1 {
 }
 
 .close-btn:hover {
+    background-color: #d1c7f3;
+}
+
+
+/* Static Stars */
+.static-stars::before {
+    content: "★★★★★";
+    color: #ffd700;
+}
+
+/* Interactive Stars */
+.modal-stars span {
+    color: #d3d3d3;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal-stars span.active {
+    color: #ffd700;
+}
+
+.modal-stars span:hover,
+.modal-stars span:hover ~ span {
+    color: #ffd700;
+}
+
+/* modal styling */
+.custom-modal {
+    display: none;
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: #5d4793;
+    color: #ffffff;
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 5; 
+    opacity: 0; 
+    transition: top 0.4s ease, opacity 0.4s ease; 
+}
+
+.custom-modal.active {
+    display: block;
+    top: 50%; 
+    opacity: 1; 
+    transform: translate(-50%, -50%);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(63, 48, 98, 0.8);
+    display: none;
+    z-index: 2; 
+    transition: opacity 0.3s ease;
+}
+
+.overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+/* modal stars  */
+.modal-stars span {
+    font-size: 1.5rem;
+    color: #d3d3d3;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.modal-stars span:hover,
+.modal-stars span:hover ~ span {
+    color: #ffd700; 
+}
+
+.modal-stars span.active {
+    color: #ffd700; 
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#review-name,
+#review-text {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#review-text {
+    height: 60px;
+}
+
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.submit-modal-btn,
+.close-modal-btn {
+    padding: 10px 15px;
+    background-color: #ffffff;
+    color: #5d4793;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-modal-btn:hover,
+.close-modal-btn:hover {
     background-color: #d1c7f3;
 }
