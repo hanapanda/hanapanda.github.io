@@ -5,9 +5,10 @@ const soups = [
         rating: 5,
         description: "usually, I hate tomato but tomato soup? I would kill for it (hypothetical).",
         img: "images/tomato.png",
+        atSchool: true,
         reviews: [
-            { user: "Kylie Jenner", comment: "Toma", rating: "7/5" },
-            { user: "Mano Gay", comment: "Mushroom better", rating: "3/5" },
+            { user: "kylie zhenner", comment: "Toma", rating: "7/5" },
+            { user: "mano g8!", comment: "Mushroom better", rating: "3/5" },
             { user: "crime rat", comment: "they're too red", rating: "5/5"},
             { user: "souperMAN", comment: "this particular tomahto soup has the vim?? of summer, encapsulated in the sweety tanginess of fresh herbs and spices, blended together expertly by the hand of whatever chef was responsible for it.", rating: "4.5/5"},
             { user: "angelina ballerina", comment: "10/10 tastes like tomatoes", rating: "5/5"}
@@ -18,15 +19,27 @@ const soups = [
         rating: 4,
         description: "This is such a comfort soup. but i dont like eating the corn",
         img: "images/cornpork.png",
+        atSchool: false,
         reviews: [
-            { user: "AHHHHHH", comment: "It's just good", rating: "5/5" },
-            { user: "Mano Gay", comment: "Best soup to be ever invented omg. nom nom.", rating: "5/5" },
+            { user: "kylie zhenner", comment: "It's just good", rating: "5/5" },
+            { user: "mano g8!", comment: "Best soup to be ever invented omg. nom nom.", rating: "5/5" },
+            { user: "crime rat", comment: "miso miso mi so hungry", rating: "5/5" }
+        ]
+    },
+    {
+        name: "Potato & Onion",
+        rating: 4,
+        description: "This is such a comfort soup. but i dont like eating the corn",
+        img: "images/cornpork.png",
+        atSchool: true,
+        reviews: [
+            { user: "kylie zhenner", comment: "It's just good", rating: "5/5" },
+            { user: "mano g8!", comment: "Best soup to be ever invented omg. nom nom.", rating: "5/5" },
             { user: "crime rat", comment: "miso miso mi so hungry", rating: "5/5" }
         ]
     },
 
 ];
-
 function showReview() {
     const reviewContainer = document.querySelector(".review-content");
     const overlay = document.getElementById('overlay');
@@ -44,18 +57,25 @@ function showReview() {
         reviewContainer.appendChild(dottedLine);
     });
 
-    overlay.classList.add('active');
+    overlay.style.display = 'block';  // Display the overlay
     const receipt = document.querySelector('.review-receipt');
     receipt.style.display = 'block';
-    setTimeout(() => receipt.classList.add('active'), 10);
+    setTimeout(() => {
+        receipt.classList.add('active');
+        overlay.classList.add('active');
+    }, 10);
 }
 
 function hideReview() {
     const overlay = document.getElementById('overlay');
     const receipt = document.querySelector('.review-receipt');
-    overlay.classList.remove('active');
+
     receipt.classList.remove('active');
-    setTimeout(() => receipt.style.display = 'none', 400);
+    overlay.classList.remove('active');
+    setTimeout(() => {
+        receipt.style.display = 'none';
+        overlay.style.display = 'none';
+    }, 400);
 }
 
 function updateSoup() {
@@ -67,10 +87,17 @@ function updateSoup() {
         document.getElementById("soup-name").textContent = soup.name;
         document.getElementById("soup-description").textContent = soup.description;
         document.getElementById("soup-img").src = soup.img;
-        document.querySelector(".stars").dataset.rating = soup.rating;
+        // document.querySelector(".stars").dataset.rating = soup.rating;
+        const ratingStars = document.querySelector(".stars");
+        ratingStars.dataset.rating = soup.rating;
+
+        const atSchoolCheckbox = document.getElementById("at-school-checkbox");
+        atSchoolCheckbox.checked = !!soup.atSchool;
+
         soupContainer.style.opacity = 1;
     }, 300);
 }
+
 
 function nextSoup() {
     currentSoup = (currentSoup + 1) % soups.length;

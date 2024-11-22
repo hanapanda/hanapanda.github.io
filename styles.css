@@ -236,7 +236,7 @@ h1 {
     font-family: monospace;
     font-size: 0.8rem;
     overflow-y: auto;
-    z-index: 4;
+    z-index: 6;
     border-radius: 5px;
     display: none;
     transition: top 0.4s ease;
@@ -244,6 +244,7 @@ h1 {
 
 .review-receipt.active {
     top: 50%;
+    display: block;
 }
 
 .review-receipt h3 {
@@ -393,3 +394,70 @@ h1 {
 .close-modal-btn:hover {
     background-color: #d1c7f3;
 }
+#at-school-checkbox {
+    margin-left: 5px;
+    transform: scale(1.2);
+}
+
+.form-elements {
+    margin-top: 15px;
+}
+
+.at-school {
+    margin-bottom: 10px; 
+}
+
+.review-stars {
+    margin-top: 10px;
+}
+
+
+#at-school-checkbox {
+    display: none;
+}
+
+
+.form-group2 label {
+    position: relative;
+    padding-left: 30px;
+    font-size: 1rem;
+    user-select: none;
+    cursor: default;
+}
+
+.form-group2 .custom-checkbox {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 2px solid #5d4793; 
+    border-radius: 4px;
+}
+
+.form-group2 input:checked + .custom-checkbox {
+    background-color: #5d4793; 
+}
+
+.form-group2 .custom-checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 50%;
+    top: 40%;
+    width: 5px;
+    height: 12px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+
+.form-group2 input:checked + .custom-checkbox:after {
+    display: block;
+}
+
+
+

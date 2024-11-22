@@ -40,14 +40,39 @@
         <div class="soup-slider" id="soup-review">
             <button class="arrow left-arrow" onclick="prevSoup()">&#10094;</button>
             <div class="soup" id="soup-container">
-                <div class="soup-info">
+
+                <!-- <div class="soup-info">
                     <h2 id="soup-name">Tomato</h2>
+                    <label>
+                        At School? 
+                        <input type="checkbox" id="at-school-checkbox" disabled>
+                    </label>
                     <div class="stars static-stars" data-rating="5"></div>
                     <p class="description" id="soup-description">I love this soup so much I could marry this soup. Usually, I hate tomato but tomato soup? I would kill for it (hypothetical).</p>
                     <div class="comment-box">
                         <button class="submit-btn" onclick="openModal()">Submit review</button>
                     </div>
+                </div> -->
+                <div class="soup-info">
+                    <h2 id="soup-name">Tomato</h2>
+                    <div class="stars static-stars" data-rating="5"></div>
+                    <p class="description" id="soup-description">I love this soup so much I could marry this soup. Usually, I hate tomato but tomato soup? I would kill for it (hypothetical).</p>
+                    
+                    <div class="form-elements">
+                        <div class="form-group2">
+                            <label for="at-school-checkbox">
+                                At school?
+                                <input type="checkbox" id="at-school-checkbox" disabled>
+                                <span class="custom-checkbox"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="review-stars">
+                            <button class="submit-btn" onclick="openModal()">Submit review</button>
+                        </div>
+                    </div>
                 </div>
+
                 <img src="images/tomato.png" alt="Tomato Soup" class="soup-img" id="soup-img">
             </div>
             <button class="arrow right-arrow" onclick="nextSoup()">&#10095;</button>
