@@ -1,33 +1,47 @@
 let currentSoup = 0;
 const soups = [
     {
-        name: "Tomato (Basil)",
+        name: "tomato (+basil)",
         rating: 5,
-        description: "usually, I hate tomato but tomato soup? I would kill for it (hypothetically).",
+        description: "usually, I hate tomato. but whatever goes on in between when tomato turns into tomato soup allows me to forget my hatred. beautiful taste every time",
         img: "images/tomato.png",
         atSchool: true,
         reviews: [
             { user: "kylie zhenner", comment: "Toma", rating: "7/5" },
-            { user: "mano g8!", comment: "Mushroom better", rating: "3/5" },
+            { user: "mano g8!", comment: "mushroom better", rating: "3/5" },
             { user: "crime rat", comment: "they're too red", rating: "5/5"},
+            { user: "odruade", comment: "it's been many years since i've first tried tomato soup . upon first contact with my taste buds, the serene tasteful liquid instantly triggered my dopamine receptors, my eyes widening in shock and pleasure. my relationship with the spoon became a devoted one, its most familiar trip quickly becoming the short route between the soup bowl and my mouth.", rating: "∞/5"},
             { user: "souperMAN", comment: "this particular tomahto soup has the vim?? of summer, encapsulated in the sweety tanginess of fresh herbs and spices, blended together expertly by the hand of whatever chef was responsible for it.", rating: "4.5/5"},
             { user: "angelina ballerina", comment: "10/10 tastes like tomatoes", rating: "5/5"}
         ]
     },
     {
-        name: "Corn & Pork",
+        name: "corn & pork",
         rating: 4,
-        description: "This is such a comfort soup. but i dont like eating the corn",
+        description: "This is such a comfort soup. but i dont like eating the corn, i honestly just like the taste of the corn in the soup",
         img: "images/cornpork.png",
         atSchool: false,
         reviews: [
-            { user: "kylie zhenner", comment: "It's just good", rating: "5/5" },
-            { user: "mano g8!", comment: "Best soup to be ever invented omg. nom nom.", rating: "5/5" },
-            { user: "crime rat", comment: "miso miso mi so hungry", rating: "5/5" }
+            { user: "kylie zhenner", comment: "", rating: "5/5" },
+            { user: "angelina ballerina", comment: "approved by my grandmother", rating: "4/5" },
+            // { user: "crime rat", comment: "miso miso mi so hungry", rating: "5/5" }
         ]
     },
     {
-        name: "Potato & Onion (leek)",
+        name: "pumpkin",
+        rating: 3,
+        description: "hmm when this soup is chunky its not good but when its not chunky its amaaazzzingggg. school one is salty tho. weird.",
+        img: "images/pumpkin.png",
+        atSchool: true,
+        reviews: [
+            { user: "toma", comment: "It's just good", rating: "5/5" },
+            { user: "mano g8!", comment: "i like it, but sometimes its too sweet.", rating: "3/5" },
+            { user: "crime rat", comment: "i like it, but... they’re too pumpkin", rating: "4/5" },
+            { user: "smithy", comment: "the best soup ever", rating: "5/5" }
+        ]
+    },
+    {
+        name: "potato & onion (or leek)",
         rating: 4,
         description: "this soup was decent! school renamed it to be fancier but it tastes the same. pretty good.",
         img: "images/potato-leek.png",
@@ -35,6 +49,18 @@ const soups = [
         reviews: [
             { user: "laura", comment: "i really like this I like how thick it is I like the flavour I like the consistency ", rating: "5/5" },
             { user: "saachi", comment: "tsktsktsk", rating: "3/5" },
+        ]
+    },
+    {
+        name: "miiiso",
+        rating: 4,
+        description: "this soup is very classic. very appetizing. -0.5 for how it makes my mouth dry afterwards tho",
+        img: "images/miso.png",
+        atSchool: false,
+        reviews: [
+            { user: "kylie zhenner", comment: "It's just good", rating: "5/5" },
+            { user: "mano g8!", comment: "Best soup to be ever invented omg. nom nom.", rating: "5/5" },
+            { user: "crime rat", comment: "miso miso mi so hungry", rating: "5/5" }
         ]
     },
 
@@ -87,8 +113,15 @@ function updateSoup() {
         document.getElementById("soup-description").textContent = soup.description;
         document.getElementById("soup-img").src = soup.img;
         // document.querySelector(".stars").dataset.rating = soup.rating;
+        
         const ratingStars = document.querySelector(".stars");
-        ratingStars.dataset.rating = soup.rating;
+        const rating = soup.rating;
+        let starsHTML = "";
+        for (let i = 1; i <= 5; i++) {
+            starsHTML += i <= rating ? "★" : "☆";
+        }
+        ratingStars.innerHTML = starsHTML;
+
 
         const atSchoolCheckbox = document.getElementById("at-school-checkbox");
         atSchoolCheckbox.checked = !!soup.atSchool;

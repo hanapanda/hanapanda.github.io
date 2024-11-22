@@ -283,11 +283,7 @@ h1 {
 }
 
 
-/* Static Stars */
-.static-stars::before {
-    content: "★★★★★";
-    color: #ffd700;
-}
+
 
 /* Interactive Stars */
 .modal-stars span {
@@ -461,3 +457,11 @@ h1 {
 
 
 
+.stars {
+    font-size: 1.5rem;
+    color: #ffd700;
+}
+
+.stars .empty {
+    color: #d3d3d3;
+}
