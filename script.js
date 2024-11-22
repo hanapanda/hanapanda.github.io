@@ -1,9 +1,9 @@
 let currentSoup = 0;
 const soups = [
     {
-        name: "Tomato",
+        name: "Tomato (Basil)",
         rating: 5,
-        description: "usually, I hate tomato but tomato soup? I would kill for it (hypothetical).",
+        description: "usually, I hate tomato but tomato soup? I would kill for it (hypothetically).",
         img: "images/tomato.png",
         atSchool: true,
         reviews: [
@@ -27,15 +27,14 @@ const soups = [
         ]
     },
     {
-        name: "Potato & Onion",
+        name: "Potato & Onion (leek)",
         rating: 4,
-        description: "This is such a comfort soup. but i dont like eating the corn",
-        img: "images/cornpork.png",
+        description: "this soup was decent! school renamed it to be fancier but it tastes the same. pretty good.",
+        img: "images/potato-leek.png",
         atSchool: true,
         reviews: [
-            { user: "kylie zhenner", comment: "It's just good", rating: "5/5" },
-            { user: "mano g8!", comment: "Best soup to be ever invented omg. nom nom.", rating: "5/5" },
-            { user: "crime rat", comment: "miso miso mi so hungry", rating: "5/5" }
+            { user: "laura", comment: "i really like this I like how thick it is I like the flavour I like the consistency ", rating: "5/5" },
+            { user: "saachi", comment: "tsktsktsk", rating: "3/5" },
         ]
     },
 
