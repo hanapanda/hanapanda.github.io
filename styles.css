@@ -235,7 +235,7 @@ h1 {
     color: #ffffff;
     font-family: monospace;
     font-size: 0.8rem;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     z-index: 6;
     border-radius: 5px;
     display: none;
