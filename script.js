@@ -12,7 +12,8 @@ const soups = [
             { user: "crime rat", comment: "they're too red", rating: "5/5"},
             { user: "odruade", comment: "it's been many years since i've first tried tomato soup . upon first contact with my taste buds, the serene tasteful liquid instantly triggered my dopamine receptors, my eyes widening in shock and pleasure. my relationship with the spoon became a devoted one, its most familiar trip quickly becoming the short route between the soup bowl and my mouth.", rating: "∞/5"},
             { user: "souperMAN", comment: "this particular tomahto soup has the vim?? of summer, encapsulated in the sweety tanginess of fresh herbs and spices, blended together expertly by the hand of whatever chef was responsible for it.", rating: "4.5/5"},
-            { user: "angelina ballerina", comment: "10/10 tastes like tomatoes", rating: "5/5"}
+            { user: "angelina ballerina", comment: "10/10 tastes like tomatoes", rating: "5/5"},
+            { user: "uwukitty", comment: "i cannot rmb the last time i had this soup.", rating: "3/5"}
         ]
     },
     {
@@ -24,7 +25,7 @@ const soups = [
         reviews: [
             { user: "kylie zhenner", comment: "", rating: "5/5" },
             { user: "angelina ballerina", comment: "approved by my grandmother", rating: "4/5" },
-            // { user: "crime rat", comment: "miso miso mi so hungry", rating: "5/5" }
+            { user: "uwukitty", comment: "i like the soup, but not really the ingredients tho", rating: "4/5"},
         ]
     },
     {
@@ -37,7 +38,8 @@ const soups = [
             { user: "toma", comment: "It's just good", rating: "5/5" },
             { user: "mano g8!", comment: "i like it, but sometimes its too sweet.", rating: "3/5" },
             { user: "crime rat", comment: "i like it, but... they’re too pumpkin", rating: "4/5" },
-            { user: "smithy", comment: "the best soup ever", rating: "5/5" }
+            { user: "smithy", comment: "the best soup ever", rating: "5/5" },
+            { user: "uwukitty", comment: "depends on how thick is it, but it is still a good souppp!", rating: "4/5"},
         ]
     },
     {
@@ -60,7 +62,8 @@ const soups = [
         reviews: [
             { user: "kylie zhenner", comment: "It's just good", rating: "5/5" },
             { user: "mano g8!", comment: "Best soup to be ever invented omg. nom nom.", rating: "5/5" },
-            { user: "crime rat", comment: "miso miso mi so hungry", rating: "5/5" }
+            { user: "crime rat", comment: "miso miso mi so hungry", rating: "5/5" },
+            { user: "uwukitty", comment: "everything about is AMAZING, esp during winter getting served a nice warm soup. 🥰", rating: "5/5"}
         ]
     },
 
