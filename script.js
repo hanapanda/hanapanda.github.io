@@ -26,6 +26,7 @@ const soups = [
             { user: "kylie zhenner", comment: "", rating: "5/5" },
             { user: "angelina ballerina", comment: "approved by my grandmother", rating: "4/5" },
             { user: "uwukitty", comment: "i like the soup, but not really the ingredients tho", rating: "4/5"},
+            { user: "ashslay", comment: "it's very 鲜,玉米的味道可以很好的balance out排骨的膻, so yea just very good overall", rating: "4/5"},
         ]
     },
     {
