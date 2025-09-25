@@ -67,6 +67,16 @@ const soups = [
             { user: "uwukitty", comment: "everything about is AMAZING, esp during winter getting served a nice warm soup. 🥰", rating: "5/5"}
         ]
     },
+    {
+        name: "lobsta bisqua",
+        rating: 4,
+        description: "i actually haven't really had this soup yet. thanks eunseo for the rec",
+        img: "images/lobsterbisque.png",
+        atSchool: false,
+        reviews: [
+            { user: "roomtempbutter", comment: "this is like tomato soups' sexy aunt. luxurious, likes the finer things in life, but something you can always come home to", rating: "4.5/5" },
+        ]
+    },
 
 ];
 function showReview() {
